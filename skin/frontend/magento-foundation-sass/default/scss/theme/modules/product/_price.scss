@@ -1,0 +1,35 @@
+/* template\catalog/product/price.phtml */
+.large-screen-product-info{
+}
+
+	.catalog-product-price .old-price {
+		width: 49%;
+	}
+	.old-price{
+		float: left;
+		text-align: right;
+		padding-right: 1%;
+		text-decoration: line-through;
+	}
+	.special-price {
+		width: 49%;
+		float: left;
+		text-align: left;
+		padding-left: 1%;
+	}
+
+	h5.price {
+		color:$base-color;
+		font-size: 32px;
+		display:block;
+	}
+	.product-view .price-box{
+		margin-bottom:10px;
+		border-bottom: 5px solid $loud-color;
+		width:100%;
+		float:left;
+		// border-bottom:4px solid #e78f1a;
+		
+	}
+
+	

@@ -1,0 +1,55 @@
+@include fontFace('MyFont','font/myfont');
+
+/* Colors */
+
+$electricPink: #fe4fe4;
+$moldyslate:#344446;
+$limePlaster:#9ac5ca;
+$fallenPine:#2E4244;
+
+$text-color: #636363;
+$accent-color: $moldyslate;
+$loud-color: #e79639 ; 
+$really-loud-color:#ff7400;
+$link-color: $limePlaster; 
+$on-base-color: snow;
+
+
+$base-color: $fallenPine;             // The main accent background color
+$base-text-color: $moldyslate;         // The color that works as text on the base color
+$base-text-hover-color: $electricPink; // The color that works as hover text on the base color
+
+$base-dark-color: #828282;
+$base-light-color: #fff;
+
+
+// Header
+$header-background-color: $fallenPine;
+
+// Content 
+$content-background-color: $moldyslate;
+
+// Sidebar
+$sidebar-background-color: $base-dark-color;
+
+// Footer
+$footer-background-color: $base-dark-color;
+
+// Button
+$button-background-color: $loud-color;
+
+/* Typography */
+
+$base-font-size: 15px;
+$base-font-weight: 400;
+$museo-slab:"museo-slab", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$museo-rounded:"museo-sans-rounded", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$open-sans:"open-sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$gothic:"alternate-gothic-no-3-d", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$base-font-family: $museo-rounded;
+
+// Headings
+$heading-font-family: $base-font-family;
+$heading-font-weight: $base-font-weight;
+
+

@@ -1,0 +1,71 @@
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: 1.6;
+  // background:#828282;
+}
+
+h1, h2, h3, h4, h5, h6, li, li a, a, span, button, input,  { font-family: $base-font-family; font-weight: normal; }
+.h1, .h2 { line-height: 1.1; }
+.h3, .h4 { line-height: 1.3; }
+.h1 { font-size: 400%; letter-spacing: -2px; }
+.h2 { font-size: 250%; letter-spacing: -1px; }
+.h3 { font-size: 200%; }
+.h4 { font-size: 180%; }
+.h5 { font-size: 130%; }
+
+a {
+	color:$loud-color;
+}
+
+// .small-menu-off-canvas-container {
+// 	button, .button {
+// 		background: #ccc;
+// 		color: $base-color;
+// 	}
+
+// 	 table{
+// 		border:none;
+// 		width: 100%;
+// 	}
+// 		input[type="text"],
+// 	input[type="password"],
+// 	input[type="date"],
+// 	input[type="datetime"],
+// 	input[type="datetime-local"],
+// 	input[type="month"],
+// 	input[type="week"],
+// 	input[type="email"],
+// 	input[type="number"],
+// 	input[type="search"],
+// 	input[type="tel"],
+// 	input[type="time"],
+// 	input[type="url"],
+// 	textarea,
+// 	select{
+// 		background:#fff;
+// 		border:1px solid #636363;
+// 		border-radius: 2px;
+// 		padding:2px 5px;
+// 		box-shadow: none;
+// 		webkit-box-shadow:none;
+// 		height:1.7rem;
+// 	}
+// }
+// .validation-advice {
+// 	color:red;
+// }
+
+// ul.messages {
+// 	list-style: none;
+// 	margin:0;
+// 	ul {
+// 		list-style: none;
+// 		margin:0;
+// 	}
+// 	span {
+// 		color:$loud-color;
+// 	}
+// }

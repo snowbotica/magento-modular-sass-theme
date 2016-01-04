@@ -1,0 +1,28 @@
+/* 
+local/page/template/contact-links.phtml 
+*/
+
+ul.contact-links {
+	list-style:none;
+	display:inline;
+	margin-top:15px;
+	padding:0;
+	float:right;
+	li {
+		float:left;
+		display: block;
+		a {
+			font-size:14px;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding:5px 10px;
+			margin-right:10px;
+			color: $link-color;
+			border: 2px solid $link-color;
+			border-radius:5px;
+		}
+		a:hover {
+			color:snow;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+.footer {
+	@media (max-width: 767px) { // small screens
+        text-align: center !important;
+    } 
+    p, a, span {
+    	color:$on-base-color;
+    	font-size:0.8rem;
+    }
+    .footer-heading {
+		color:$on-base-color;
+		font-size: 16px;
+		@media (max-width: 767px) { // small screens
+        	margin-top:15px;
+    	} 
+	}
+	ul.footer-list {
+		margin:0;
+		li {
+			font-size: 14px;
+			a {
+    			color:$link-color;
+			}
+			a:hover {
+    			color:$base-text-hover-color;
+			}
+		}
+	}
+	.copyright{
+		margin-top:12px;
+		margin-bottom:12px;
+		color:$base-text-color;
+	}
+}

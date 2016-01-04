@@ -1,0 +1,26 @@
+/* 
+page/template/links.phtml 
+*/
+
+ul.account-links {
+	list-style:none;
+	display:inline;
+	margin-top:15px;
+	padding:0;
+	float:right;
+	li {
+		float:left;
+		display: block;
+		a {
+			font-size:14px;
+			text-decoration: none;
+			text-transform: uppercase;
+			padding:5px 10px;
+			color: $limePlaster;
+			border-radius:5px;
+		}
+		a:hover {
+			color:snow;
+		}
+	}
+}

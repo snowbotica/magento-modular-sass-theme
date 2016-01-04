@@ -1,0 +1,34 @@
+.contact_form-messages {
+	@include grid-row();
+	.notifications {
+		@media (min-width: 767px) { // big screens
+	        @include grid-column($columns:8, $offset:2); 
+	    }
+	    @media (max-width: 767px) { // small screens
+	        @include grid-column(12); 
+	    } 	
+	}
+}
+.contact_form-body {
+	@include grid-row();
+	.contact-form {
+		@media (min-width: 767px) { // big screens
+	        @include grid-column($columns:8, $offset:2); 
+	    }
+	    @media (max-width: 767px) { // small screens
+	        @include grid-column(12); 
+	    }	
+	} 
+}
+
+.contact-form-row {
+	@include grid-row();
+	.input-container {
+		@media (min-width: 767px) { // big screens
+	        @include grid-column($columns:8, $offset:2); 
+	    }
+	    @media (max-width: 767px) { // small screens
+	        @include grid-column(12); 
+	    }	
+	}
+}

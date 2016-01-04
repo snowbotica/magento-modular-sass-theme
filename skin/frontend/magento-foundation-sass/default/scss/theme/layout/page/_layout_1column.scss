@@ -1,0 +1,18 @@
+.full-width-background {
+	width:100%;
+	background:$content-background-color;
+}
+
+.layout-1column {
+	@include default-layout;
+	section[role="content"]{
+		@media (min-width: 767px) { // big screens
+	        @include grid-column($columns:12); 
+	    }
+	    @media (max-width: 767px) { // small screens
+	        @include grid-column(12); 
+	        margin-top:45px;
+	    } 
+		
+	}
+}

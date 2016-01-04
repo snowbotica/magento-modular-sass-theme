@@ -1,0 +1,27 @@
+
+.footer-social {
+	width:55px; height:40px; display: block; float:left;  font-size: 0 !important;
+	background: url(images/social-sprite.png) no-repeat; margin-bottom: 4px;
+}
+.footer-social-icons {
+	@media (max-width: 767px) { // small screens
+		margin: 0 auto;
+		width: 220px;
+	}
+}
+
+.footer-twitter   {background-position:-104px 0px;}
+.footer-email     {background-position:-208px 0px;}
+.footer-facebook  {background-position:0px 0px;}
+.footer-facebook  {background-position:-312px 0px;}
+.footer {
+
+    p, address, .footer-tel, a, span{
+    	color:$base-text-color;
+    	font-size:0.9rem;
+    }
+    
+	.footer-tel{
+		font-size: 1.7rem !important;
+	}
+}

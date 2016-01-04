@@ -1,0 +1,33 @@
+/*
+catalog/navigation/top.phtml
+*/
+
+ul.catalog-navigation {
+	margin:10px 0;
+	padding:0;
+	list-style:none;
+	display:inline;
+	float:left;
+	li {
+		float:left;
+		display: block;
+		a {
+			text-decoration: none;
+			font-size: 18px;
+			text-transform: uppercase;
+			padding:5px 15px 5px 0;
+			color: $accent-color;
+			text-shadow: 1px 1px 1px #3F7880;
+			&:hover {
+				color: snow;
+				text-shadow: 1px 1px 1px #3F7880;
+			}
+		}
+		&.active {
+			a {
+				text-shadow: 0px 0px 1px #8DCDD6;	
+			}
+		}
+
+	}
+}
