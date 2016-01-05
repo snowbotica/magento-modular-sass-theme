@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category    Phoenix
+ * @package     Phoenix_Moneybookers
+ * @copyright   Copyright (c) 2015 Phoenix Medien GmbH & Co. KG (http://www.phoenix-medien.de)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Snowbotica_Landingpage>
+            <version>0.0.1</version>
+        </Snowbotica_Landingpage>
+    </modules>
+    <global>
+        <blocks>
+          <!--   <justaname>
+                <class>Snowbotica_Landingpage_Block</class>
+            </justaname> -->
+            <!--  
+                <adminhtml>
+                    <rewrite>
+                        <catalog_product_grid>Snowbotica_Landingpage_Block_Adminhtml_Catalog_Product_Grid</catalog_product_grid>
+                    </rewrite>
+                </adminhtml>
+            -->
+        </blocks>
+        <helpers>
+            <snowbotica_landingpage>
+                <class>snowbotica_Landingpage_Helper</class>
+            </snowbotica_landingpage>
+        </helpers>
+        <models>
+            <!-- 
+            this is the model alias 
+            refered to in install.php 
+            -->
+<!--             <artboard>
+                <class>Snowbotica_Landingpage_Model</class>
+                <resourceModel>artboard_mysql4</resourceModel>
+            </artboard> -->
+
+<!--             <artboard_mysql4>
+                <class>Snowbotica_Landingpage_Model_Mysql4</class>
+                <entities>
+                    <materials>
+                        <table>snowbotica_landingpage_materials</table>
+                    </materials>
+                </entities>
+            </artboard_mysql4> -->
+
+        </models>
+        <page>
+            <layouts>
+                <snowbotica_landingpage translate="label">
+                    <label>Home_page</label>
+                    <template>snowbotica/landingpage/page-index.phtml</template>
+                    <layout_handle>snowbotica_landingpage</layout_handle>
+                </snowbotica_landingpage>
+            </layouts>
+        </page>
+        <resources>
+            <!-- 
+            this must match our folder name 
+            in the module sql folder 
+            -->
+          <!--   <Snowbotica_landingpage_setup>
+                <setup> -->
+                    <!--
+                    This defines which module the setup
+                    scripts in this location belong to.
+                    -->
+                    <!-- <module>Snowbotica_Landingpage</module> -->
+                    <!--
+                    In each setup script, this
+                    value determines the class of $this.
+                    -->
+                    <!-- <class>Mage_Core_Model_Resource_Setup</class> -->
+                    <!--
+                    This is only relevant if you have
+                    multiple database connections.
+                    -->
+                <!-- </setup> -->
+                <!-- <connection> -->
+                    <!-- <use>core_setup</use> -->
+                <!-- </connection> -->
+            <!-- </snowbotica_landingpage_setup> -->
+
+        </resources>
+
+
+
+    </global>
+  <!--   <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <snowbotica_landingpage after="Mage_Adminhtml">Snowbotica_Landingpage_Adminhtml</snowbotica_landingpage>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin> -->
+    <adminhtml>
+        <layout>
+<!--             <updates>
+                <snowbotica_landingpage>
+                    <file>snowbotica_landingpage.xml</file>
+                </snowbotica_landingpage>
+            </updates> -->
+        </layout> 
+        <events>
+           <!--  <catalog_product_save_after>
+                <observers>
+                    <Snowbotica_Landingpage_save_product_data>
+                        <type>singleton</type>
+                        <class>snowbotica_landingpage/observer</class>
+                        <method>saveProductTabData</method>
+                    </Snowbotica_Landingpage_save_product_data>
+                </observers>
+            </catalog_product_save_after> -->
+        </events>
+    </adminhtml>
+    <frontend>
+        <routers>
+<!--             <artboard>
+                <use>standard</use>
+                <args>
+                    <module>SSnowbotica_Landingpage</module>
+                    <frontName>artboard</frontName>
+                </args>
+            </artboard> -->
+        </routers>
+        <layout>
+            <updates>
+                <snowbotica_landingpage>
+                    <file>snowbotica_landingpage.xml</file>
+                </snowbotica_landingpage>
+            </updates>
+        </layout> 
+    </frontend>
+</config>

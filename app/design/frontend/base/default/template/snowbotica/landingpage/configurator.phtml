@@ -1,0 +1,156 @@
+<?php 
+$_product = Mage::registry('current_product');
+$product_id = Mage::registry('current_product')->getId();
+?>
+<!--
+
+[
+{"material":"Canvas Material 12oz", "roll_width" :"72", "cost_price":"0.00029","markup":"0.40"},
+{"material":"Canvas Material 12oz", "roll_width" :"108", "cost_price":"0.00036","markup":"0.40"},
+{"material":"Canvas Material 15oz", "roll_width" :"72", "cost_price":"0.00034","markup":"0.40"},
+{"material":"Canvas Material 15oz", "roll_width" :"108", "cost_price":"0.00037","markup":"0.40"},
+{"material":"Acrylic Primed Cotton Duck", "roll_width" :"108", "cost_price":"0.00092","markup":"0.40"}
+]
+
+[
+{"material" : "Wood Poplar", "depth" : "small", "cost_price" : " 0.012", "margin" :"0.40"},
+{"material" : "Wood Poplar", "depth" : "medium", "cost_price" : " 0.015", "margin" :"0.40"},
+{"material" : "Wood Poplar", "depth" : "large", "cost_price" : " 0.018", "margin" :"0.40"}
+]
+
+[
+{"job":"rip_and_mould","hourly_charge":"30", "margin":"0.40"},
+{"job":"cut_to_size",       "hourly_charge":"30", "margin":"0.40"},
+{"job":"tenored_join",     "hourly_charge":"30", "margin":"0.40"},
+{"job":"stretching_size","hourly_charge":"30", "margin":"040"} 
+]
+-->
+<form action="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>artboard/api/placeCustomOrder/" id="feedbackForm" method="post">
+  <fieldset class="product-options configurator-fields" id="product-options-wrapper">
+    <dl>
+     
+     
+      <?php
+      $artboard_calc_type = Mage::getResourceModel('catalog/product')->getAttributeRawValue($product_id, 'artboard_calc_type', Mage::app()->getStore());
+      ?>
+      <input type="hidden" name="configurator_product_id" value="<?php echo $product_id;?>">
+      <input type="hidden" name="configurator_calc_type" value="<?php echo $artboard_calc_type;?>">
+      <?php if($artboard_calc_type == "Stretcher"):?>
+      <input type="hidden" name="configurator_primer" value="working">
+      <dt>
+        <label>Stretcher Type:</label>
+      </dt>
+      <dd>
+        <select class="required-entry super-attribute-select" name="configurator_stretcher_bool">
+          <option value="bars_only">Bars Only</option>
+          <option value="stretched_canvas">Stretched Canvas</option>
+        </select>
+      </dd>
+      <?php endif;?>
+      <dt>
+        <?php if($artboard_calc_type == "Stretcher"):?>
+          <label>Profile Depth:</label>
+        <?php endif;?>
+        <?php if($artboard_calc_type == "Wood Panel"):?>
+          <label>Subframe Depth:</label>
+        <?php endif;?>
+      </dt>
+      <dd> 
+        <select class="required-entry super-attribute-select" name="configurator_canvas_depth">
+        <?php
+        $artboard_panel_depth_json = Mage::getResourceModel('catalog/product')->getAttributeRawValue($product_id, 'artboard_panel_depth', 'johnjones');
+        $artboard_panel_depth      = json_decode($artboard_panel_depth_json, true);
+        ?>
+        <?php foreach ($artboard_panel_depth as $value):?>
+          <option value="<?php echo $value['material'].'|'.$value['depth']; ?>">
+            <?php echo $value['material']; ?>&nbsp;<?php echo $value['depth']; ?>
+          </option>
+        <?php endforeach ;?>
+        </select>
+      </dd>
+      <dt>
+        <?php if($artboard_calc_type == "Stretcher"):?>
+          <label>Canvas Type:</label>
+        <?php endif;?>
+        <?php if($artboard_calc_type == "Wood Panel"):?>
+          <label>Sheet Material:</label>
+        <?php endif;?>
+      </dt>
+      <dd>
+        <select class="required-entry super-attribute-select" name="configurator_material">
+        <?php
+        $artboard_materials_json = Mage::getResourceModel('catalog/product')->getAttributeRawValue($product_id, 'artboard_materials', 'johnjones');
+        $artboard_materials      = json_decode($artboard_materials_json, true);
+        ?>
+        <?php foreach ($artboard_materials as $value):?>
+          <option value="<?php echo $value['material']; ?>">
+            <?php echo $value['material']; ?>
+          </option>
+        <?php endforeach ;?>
+        </select>
+      </dd>
+      <?php if($artboard_calc_type == "Wood Panel"):?>
+      <input type="hidden" name="configurator_primer" value="working">
+      <dt>
+        <label>Primer:</label>
+      </dt>
+      <dd>
+        <select class="required-entry super-attribute-select" name="configurator_primer">
+        <?php
+        $artboard_primer_json = Mage::getResourceModel('catalog/product')->getAttributeRawValue($product_id, 'artboard_primer', 'johnjones');
+        $artboard_primer      = json_decode($artboard_primer_json, true);
+        ?>
+        <?php foreach ($artboard_primer as $value):?>
+          <option value="<?php echo $value['material']; ?>">
+            <?php echo $value['material']; ?>
+          </option>
+        <?php endforeach ;?>
+        </select>
+      </dd>
+      <?php endif;?>
+      <dt>
+        <?php if($artboard_calc_type == "Stretcher"):?>
+          <label>Canvas Dimensions:</label>
+        <?php endif;?>
+        <?php if($artboard_calc_type == "Wood Panel"):?>
+          <label>Panel Dimensions:</label>
+        <?php endif;?>
+      </dt>
+      <dd>
+        <input type="text" name="configurator_canvas_width" placeholder="width" class="" />
+        <input type="text" name="configurator_canvas_height" placeholder="height" class="" />
+      </dd>
+    </dl>
+    <div><input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" /></div>
+  </fieldset>
+  <div class="product-options-bottom">  
+
+    <a href="#" class="configurator-estimate" data-endpoint="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>artboard/api/calculatePrice/?isAjax=1">Get Quote</a>
+    <hr/>      
+    <div class="calculation-result">
+    </div>
+    <hr/>
+
+    <div class="price-box">
+      <span class="label" id="configurable-price-from-144_clone">
+        <span class="configurable-price-from-label"></span>
+      </span>
+      <span class="price-excluding-tax">
+        <span class="price" id="price-excluding-tax-144_clone">£18.90</span>
+        <span class="label">(ex. VAT)</span>
+      </span>
+      <span class="price-including-tax">          
+        <span class="price" id="price-including-tax-144_clone">£22.68</span>
+        <span class="label">(inc. VAT)</span>
+      </span>                
+    </div>
+    <div class="add-to-cart">
+      <label for="qty">Quantity:</label>
+      <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Qty" class="input-text qty validation-passed">
+      <div class="clr"></div>
+      <!-- <?php //echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);?>artboard/api/placeCustomOrder" ?> -->
+      <button type="submit" title="<?php echo $this->__('Add to Cart'); ?>" class="button b t n-ca r t"><span><span><?php echo $this->__('Add to Cart'); ?></span></span></button>
+      <!-- <button type="submit" title="<?php echo $this->__('Add to Cart'); ?>" class="button btn-cart"><span><span><?php echo $this->__('Add to Cart'); ?></span></span></button> -->
+    </div>
+  </div>
+</form>

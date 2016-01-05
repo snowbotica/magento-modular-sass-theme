@@ -4070,6 +4070,70 @@ a {
   width: 100%;
   background: #344446; }
 
+.layout-intro-section-wrapper {
+  width: 100%; }
+  .layout-intro-section-wrapper .layout-intro-section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 62.5rem;
+    *zoom: 1; }
+    .layout-intro-section-wrapper .layout-intro-section:before, .layout-intro-section-wrapper .layout-intro-section:after {
+      content: " ";
+      display: table; }
+    .layout-intro-section-wrapper .layout-intro-section:after {
+      clear: both; }
+    @media (min-width: 767px) {
+      .layout-intro-section-wrapper .layout-intro-section .intro-section {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 66.66667%;
+        float: left;
+        margin-left: 16.66667% !important; } }
+    @media (max-width: 767px) {
+      .layout-intro-section-wrapper .layout-intro-section .intro-section {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 100%;
+        float: left;
+        margin-top: 45px; } }
+
+.layout-featured-products-section-wrapper {
+  width: 100%;
+  background: white; }
+  .layout-featured-products-section-wrapper .layout-featured-products-section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 62.5rem;
+    *zoom: 1; }
+    .layout-featured-products-section-wrapper .layout-featured-products-section:before, .layout-featured-products-section-wrapper .layout-featured-products-section:after {
+      content: " ";
+      display: table; }
+    .layout-featured-products-section-wrapper .layout-featured-products-section:after {
+      clear: both; }
+    @media (min-width: 767px) {
+      .layout-featured-products-section-wrapper .layout-featured-products-section .featured-products-section {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 100%;
+        float: left; } }
+    @media (max-width: 767px) {
+      .layout-featured-products-section-wrapper .layout-featured-products-section .featured-products-section {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 100%;
+        float: left;
+        margin-top: 45px; } }
+
+.full-width-background {
+  width: 100%;
+  background: #344446; }
+
 .layout-1column {
   width: 100%;
   margin-left: auto;

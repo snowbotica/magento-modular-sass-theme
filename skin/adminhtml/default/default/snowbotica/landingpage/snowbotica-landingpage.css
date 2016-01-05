@@ -1,0 +1,31 @@
+.sevendots-artboard-admin {
+
+	/*width:100%;*/
+	background:#e7e7e7;
+		padding:25px;
+}
+
+.sevendots-artboard-admin button {
+	background: #5A6E81;
+    color: #eeeeee;
+}
+
+.sevendots-artboard-admin button.in-edit-mode {
+	background:#2B343D;
+}
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.icon-button {
+	transform: scale(0.5,0.5)
+}
+
+.button-save {
+	background:#4A974A !important;
+}
+
+.button-delete {
+	background:#DD3B3B !important;
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <snowbotica_landingpage_config translate="title" module="snowbotica_landingpage">
+            <title>landingpage</title>
+            <sort_order>100</sort_order>
+            <children>
+                <list_action translate="title" module="snowbotica_landingpage">
+                    <title>Manage</title>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/index/index</action>
+                </list_action>
+<!--                 <list_action translate="title" module="snowbotica_landingpage">
+                    <title>Extra</title>
+                    <sort_order>2</sort_order>
+                    <action>adminhtml/landingpage/extra</action>
+                </list_action> -->
+            </children>
+        </snowbotica_landingpage_config>
+    </menu>
+
+    <!-- Define ACL for access to these menu items. -->
+<!--     <acl>
+        <resources>
+            <admin>
+                <children>
+                    <snowbotica_landingpage translate="title" module="snowbotica_landingpage">
+                        <title>Canvas Directory</title>
+                        <sort_order>75</sort_order>
+                        <children>
+                            <canvas translate="title" module="snowbotica_landingpage">
+                                <title>Manage Canvases</title>
+                            </canvas>
+                        </children>
+                    </snowbotica_landingpage>
+                </children>
+            </admin>
+        </resources>
+    </acl> -->
+</config>

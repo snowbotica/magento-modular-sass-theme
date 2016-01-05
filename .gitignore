@@ -7,14 +7,50 @@
 
 !app/code/local/
 /app/code/local/*
+!app/code/local/Snowbotica
+/app/code/local/Snowbotica/*
+
+!app/code/local/Snowbotica/Landingpage/
 
 !app/code/community/
 /app/code/community/*
 
 !app/design/
 /app/design/*
+
+!app/design/adminhtml/
+/app/design/adminhtml/*
+!app/design/adminhtml/default/
+/app/design/adminhtml/default/*
+!app/design/adminhtml/default/default/
+/app/design/adminhtml/default/default/*
+
+
+!app/design/adminhtml/default/default/template/
+/app/design/adminhtml/default/default/template/*
+!app/design/adminhtml/default/default/template/Snowbotica/
+/app/design/adminhtml/default/default/template/Snowbotica/*
+
+!app/design/adminhtml/default/default/template/Snowbotica/landingpage/
+
 !app/design/frontend/
 /app/design/frontend/*
+
+!app/design/frontend/base/
+/app/design/frontend/base/*
+!app/design/frontend/base/default/
+/app/design/frontend/base/default/*
+!app/design/frontend/base/default/template/
+/app/design/frontend/base/default/template/*
+!app/design/frontend/base/default/template/Snowbotica
+/app/design/frontend/base/default/template/Snowbotica/*
+
+!app/design/frontend/base/default/template/Snowbotica/landingpage/
+
+!app/design/frontend/base/default/layout/
+/app/design/frontend/base/default/layout/*
+
+!app/design/frontend/base/default/layout/Snowbotica_landingpage.xml
 
 !app/design/frontend/magento-foundation-sass/
 /app/design/frontend/magento-foundation-sass/*
@@ -25,6 +61,8 @@
 !app/etc/modules/
 /app/etc/modules/*
 
+!app/etc/modules/Snowbotica_Landingpage.xml
+
 !js/
 /js/*
 !js/foundation/
@@ -32,8 +70,27 @@
 
 !skin/
 /skin/*
+
+!/skin/adminhtml/
+/skin/adminhtml/*
+!/skin/adminhtml/default/
+/skin/adminhtml/default/*
+!/skin/adminhtml/default/default/
+/skin/adminhtml/default/default/*
+!/skin/adminhtml/default/default/Snowbotica/
+/skin/adminhtml/default/default/Snowbotica/*
+
+!/skin/adminhtml/default/default/Snowbotica/landingpage/
+
 !skin/frontend/
 /skin/frontend/*
+
+!/skin/frontend/base/
+/skin/frontend/base/*
+!/skin/frontend/base/default/
+/skin/frontend/base/default/*
+!/skin/frontend/base/default/Snowbotica/
+/skin/frontend/base/default/Snowbotica/*
 
 !skin/frontend/magento-foundation-sass/
 /skin/frontend/magento-foundation-sass/*

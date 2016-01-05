@@ -7,7 +7,6 @@
          url('fonts/Museo_Slab_500_2-webfont.svg#museo_slab500') format('svg');
     font-weight: normal;
     font-style: normal;
-
 } 
 
 @import "normalize";
@@ -43,6 +42,8 @@ $include-print-styles: false;
 @import "theme/layout/page/html/layout_header";
 // footer  
 @import "theme/layout/page/html/layout_footer";
+// landing page
+@import "theme/layout/landingpage/layout_landingpage";
 // page types  
 @import "theme/layout/page/layout_1column";
 @import "theme/layout/page/layout_2columns-left";
